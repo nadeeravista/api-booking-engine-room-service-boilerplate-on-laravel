@@ -223,16 +223,6 @@ npx lint-staged
 npx commitlint --edit
 ```
 
-#### **Commit Message Format:**
-
-```bash
-<type>(<scope>): <subject>
-
-<body>
-
-<footer>
-```
-
 **Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`, `wip`
 
 **Scopes:** `api`, `auth`, `service`, `repository`, `model`, `test`, `config`, `docs`, `deps`
