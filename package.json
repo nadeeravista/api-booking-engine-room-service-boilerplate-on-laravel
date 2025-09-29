@@ -19,20 +19,20 @@
         "test:php": "vendor/bin/phpunit",
         "test:php:coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-html coverage --coverage-text --coverage-clover coverage.xml"
     },
-  "lint-staged": {
-    "app/**/*.php": [
-      "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes"
-    ],
-    "tests/**/*.php": [
-      "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes"
-    ],
-    "database/**/*.php": [
-      "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  }
+    "lint-staged": {
+        "app/**/*.php": [
+            "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes"
+        ],
+        "tests/**/*.php": [
+            "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes"
+        ],
+        "database/**/*.php": [
+            "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes"
+        ]
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    }
 }
