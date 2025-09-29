@@ -186,6 +186,102 @@ composer run test:feature
 
 ## 🔧 **Code Quality**
 
+### **Pre-commit Hooks (Husky)**
+
+This project uses **Husky** for automated pre-commit hooks that ensure code quality and semantic commit messages.
+
+#### **What Husky Does:**
+
+-   **🔧 Code Formatting** - Automatically formats PHP code with PHP CS Fixer
+-   **📊 Static Analysis** - Runs PHPStan on staged files
+-   **📝 Commit Messages** - Validates conventional commit format
+-   **⚡ Performance** - Only runs on changed files (lint-staged)
+
+#### **Setup Husky:**
+
+```bash
+# Install Husky hooks
+composer run husky:install
+
+# Or manually
+npm run prepare
+```
+
+#### **Husky Commands:**
+
+```bash
+# Test Husky setup
+composer run husky:test
+
+# Fix code formatting
+composer run husky:fix
+
+# Run all hooks manually
+npx lint-staged
+
+# Validate commit message
+npx commitlint --edit
+```
+
+#### **Commit Message Format:**
+
+```bash
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+**Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`, `wip`
+
+**Scopes:** `api`, `auth`, `service`, `repository`, `model`, `test`, `config`, `docs`, `deps`
+
+**Examples:**
+
+```bash
+feat(api): add room creation endpoint
+fix(service): resolve photo upload validation
+docs(readme): update installation instructions
+refactor(repository): extract common query logic
+test(controller): add API endpoint tests
+chore(deps): update PHP CS Fixer version
+```
+
+#### **What Happens on Commit:**
+
+1. **Pre-commit Hook:**
+
+    - ✅ Formats PHP code with PHP CS Fixer
+    - ✅ Runs PHPStan static analysis
+    - ✅ Only processes staged files (faster)
+
+2. **Commit Message Hook:**
+    - ✅ Validates conventional commit format
+    - ✅ Ensures proper type and scope
+    - ✅ Checks message length and format
+
+#### **Example: Failed Commit Due to Invalid Message**
+
+When you try to commit with an invalid message format, Husky will reject the commit:
+
+![Failed Commit - Invalid Message Format](docs/repcommit.png)
+
+**❌ Invalid Message:**
+
+```bash
+git commit -m "Add husky precommit hooks"
+# Error: subject may not be empty [subject-empty]
+# Error: type may not be empty [type-empty]
+```
+
+**✅ Valid Message:**
+
+```bash
+git commit -m "feat(hooks): add Husky pre-commit hooks"
+# Success: Commit passes validation
+```
+
 ### **Linting & Formatting**
 
 ```bash
@@ -208,6 +304,8 @@ composer run check
 -   **PHPStan** - Static analysis
 -   **PHPUnit** - Testing framework
 -   **Mockery** - Mocking library
+-   **Husky** - Pre-commit hooks
+-   **Commitlint** - Commit message validation
 
 ---
 
@@ -285,6 +383,11 @@ composer run lint         # Check code style
 composer run lint:fix     # Fix code style
 composer run analyze      # Run PHPStan
 composer run check        # Run all checks
+
+# Husky Pre-commit Hooks
+composer run husky:install # Install Husky hooks
+composer run husky:test    # Test PHP linting and analysis
+composer run husky:fix     # Fix PHP code formatting
 ```
 
 ### **Environment Variables**
