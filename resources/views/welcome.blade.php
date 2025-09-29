@@ -53,7 +53,7 @@
 <body>
     <div class="box">
         <h1>Booking Engine Room Service API</h1>
-        <p>Microservice for managing room rates and prices in hotel booking systems.</p>
+        <p>Service for managing room rates and prices in hotel booking systems.</p>
         <a href="/api/documentation" class="btn">API Documentation</a>
     </div>
 </body>

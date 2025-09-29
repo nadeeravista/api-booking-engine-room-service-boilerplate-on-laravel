@@ -1,6 +1,6 @@
 # 🏨 **Laravel API Rooms Service**
 
-A comprehensive Laravel-based microservice for managing room rates and prices with advanced features including photo processing, event-driven architecture, and queue-based job processing.
+A comprehensive Laravel-based Service for managing room rates and prices with advanced features including photo processing, event-driven architecture, and queue-based job processing.
 
 ## 📋 **Table of Contents**
 
@@ -510,4 +510,4 @@ This project is licensed under the MIT License.
 
 **Created**: 2025-09-29  
 **Version**: 1.0  
-**Laravel API Rooms Microservice**
+**Laravel API Rooms Service**

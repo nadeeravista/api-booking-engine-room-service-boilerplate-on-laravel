@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
  * @OA\Info(
  *     title="Room Rates & Prices API",
  *     version="1.0.0",
- *     description="Microservice for managing room rates and prices"
+ *     description="Service for managing room rates and prices"
  * )
  *
  * @OA\Server(

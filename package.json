@@ -1,7 +1,7 @@
 {
     "name": "laravel-api-rooms",
     "version": "1.0.0",
-    "description": "Laravel API microservice for managing room rates and prices",
+    "description": "Laravel API Service for managing room rates and prices",
     "private": true,
     "devDependencies": {
         "@commitlint/cli": "^18.6.1",

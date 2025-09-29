@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Strict REST API Routes for Room Rates & Prices Microservice
+// Strict REST API Routes for Room Rates & Prices Service
 // Auth0 middleware is conditionally enabled via AUTH0_ENABLED environment variable
 
 // Manual Route Definitions (Alternative to apiResource)
