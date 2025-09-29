@@ -86,6 +86,10 @@ php artisan key:generate
 # Database setup
 php artisan migrate
 php artisan db:seed
+
+# Install pre-commit hooks (REQUIRED)
+npm install
+composer run husky:install
 ```
 
 ### **Start Development Environment**
@@ -199,13 +203,20 @@ This project uses **Husky** for automated pre-commit hooks that ensure code qual
 
 #### **Setup Husky:**
 
+**⚠️ IMPORTANT: New developers MUST run this after cloning:**
+
 ```bash
-# Install Husky hooks
+# Install Node.js dependencies
+npm install
+
+# Install Husky hooks (REQUIRED for new developers)
 composer run husky:install
 
 # Or manually
 npm run prepare
 ```
+
+**Without this step, pre-commit hooks won't work!**
 
 #### **Husky Commands:**
 
@@ -296,6 +307,51 @@ composer run check
 -   **Mockery** - Mocking library
 -   **Husky** - Pre-commit hooks
 -   **Commitlint** - Commit message validation
+
+### **VS Code Formatting Setup**
+
+This project includes VS Code configuration for automatic PHP code formatting using PHP CS Fixer.
+
+#### **VS Code Configuration Files:**
+
+-   **`.vscode/settings.json`** - VS Code settings for PHP formatting
+-   **`.vscode/tasks.json`** - Tasks for manual code formatting
+-   **`.vscode/keybindings.json`** - Keyboard shortcuts for formatting
+
+#### **Formatting Options:**
+
+1. **Manual Formatting (Recommended):**
+   - **Keyboard Shortcut:** `Cmd+Shift+F` (Mac) / `Ctrl+Shift+F` (Windows/Linux)
+   - **Command Palette:** `Cmd+Shift+P` → "Tasks: Run Task" → "PHP CS Fixer: Fix Current File"
+
+2. **Auto-format on Save:**
+   - Configured in `.vscode/settings.json`
+   - Uses PHP CS Fixer extension
+   - May require extension installation
+
+#### **VS Code Tasks:**
+
+```bash
+# Available tasks (via Command Palette)
+- PHP CS Fixer: Fix Current File    # Format current PHP file
+- PHP CS Fixer: Fix All Files       # Format all PHP files in project
+```
+
+#### **Troubleshooting:**
+
+If auto-format on save doesn't work:
+
+1. **Use manual formatting:** `Cmd+Shift+F`
+2. **Install PHP CS Fixer extension** in VS Code
+3. **Check extension settings** in VS Code preferences
+4. **Use Husky pre-commit hooks** as backup formatting
+
+#### **Workflow:**
+
+1. **Edit PHP file**
+2. **Press `Cmd+Shift+F`** to format
+3. **Save file** (`Cmd+S`)
+4. **Commit changes** (Husky will also format)
 
 ---
 

@@ -91,6 +91,7 @@ class ModeratePhotoSimpleTest extends TestCase
             ->once()
             ->with('photo-456', \Mockery::on(function ($data) {
                 $result = $data['moderation_result'];
+
                 return is_array($result)
                     && isset($result['approved'])
                     && isset($result['confidence'])

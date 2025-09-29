@@ -15,7 +15,8 @@ class GenerateThumbnail implements ShouldQueue
         public string $roomId,
         public string $photoId,
         public string $s3Key
-    ) {}
+    ) {
+    }
 
     public function handle(PhotoRepositoryInterface $photoRepository): void
     {

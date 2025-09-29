@@ -42,3 +42,6 @@ Thumbs.db
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Husky internal files (keep .husky/ but ignore internal files)
+.husky/_

@@ -15,5 +15,6 @@ class RoomRateChanged
         public RoomPrice $roomPrice,
         public array $oldData = [],
         public array $newData = []
-    ) {}
+    ) {
+    }
 }
