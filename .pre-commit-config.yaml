@@ -1,0 +1,58 @@
+repos:
+  # PHP Code Formatting
+  - repo: https://github.com/pre-commit/mirrors-php-cs-fixer
+    rev: v3.48.0
+    hooks:
+      - id: php-cs-fixer
+        args: [--config=.php-cs-fixer.php, --allow-risky=yes]
+        files: \.php$
+        language_version: php8.3
+
+  # PHP Static Analysis
+  - repo: https://github.com/phpstan/phpstan
+    rev: 1.10.50
+    hooks:
+      - id: phpstan
+        args: [--memory-limit=1G]
+        files: \.php$
+        language_version: php8.3
+
+  # Commit Message Linting
+  - repo: https://github.com/commitlint/commitlint
+    rev: v18.4.3
+    hooks:
+      - id: commitlint
+        args: [--config, .commitlintrc.js]
+
+  # General file checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: check-case-conflict
+      - id: mixed-line-ending
+        args: [--fix=lf]
+
+  # Security checks
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: ["--baseline", ".secrets.baseline"]
+        exclude: package\.lock|yarn\.lock
+
+  # Composer security check
+  - repo: local
+    hooks:
+      - id: composer-security-check
+        name: Composer Security Check
+        entry: composer audit
+        language: system
+        files: composer\.(json|lock)$
+        pass_filenames: false

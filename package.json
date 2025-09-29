@@ -1,0 +1,33 @@
+{
+  "name": "laravel-api-rooms",
+  "version": "1.0.0",
+  "description": "Laravel API microservice for managing room rates and prices",
+  "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.3"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "commitlint": "commitlint --edit",
+    "commitlint:check": "commitlint --from HEAD~1 --to HEAD --verbose",
+    "lint:php": "vendor/bin/php-cs-fixer fix --diff --verbose",
+    "lint:php:check": "vendor/bin/php-cs-fixer fix --dry-run --diff --verbose",
+    "analyze:php": "vendor/bin/phpstan analyse",
+    "test:php": "vendor/bin/phpunit",
+    "test:php:coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-html coverage --coverage-text --coverage-clover coverage.xml"
+  },
+  "lint-staged": {
+    "*.php": [
+      "vendor/bin/php-cs-fixer fix --diff --verbose",
+      "vendor/bin/phpstan analyse --no-progress"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

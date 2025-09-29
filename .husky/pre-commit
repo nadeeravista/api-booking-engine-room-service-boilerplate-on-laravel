@@ -1,0 +1,3 @@
+# Run PHP CS Fixer on staged PHP files
+echo "🔧 Running PHP CS Fixer..."
+npx lint-staged
