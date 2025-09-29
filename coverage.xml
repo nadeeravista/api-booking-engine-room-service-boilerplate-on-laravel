@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1759147767">
+  <project timestamp="1759147767" name="Clover Coverage">
+    <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Contracts/PhotoRepositoryInterface.php">
+      <metrics loc="17" ncloc="17" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Contracts/PhotoServiceInterface.php">
+      <metrics loc="10" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Contracts/PriceRepositoryInterface.php">
+      <metrics loc="16" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Contracts/RoomRepositoryInterface.php">
+      <metrics loc="17" ncloc="17" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Contracts/RoomServiceInterface.php">
+      <metrics loc="20" ncloc="20" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="App\Events">
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Events/RoomRateChanged.php">
+        <class name="App\Events\RoomRateChanged" namespace="App\Events">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+        </class>
+        <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="30" type="method" name="broadcastOn" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <metrics loc="37" ncloc="28" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers">
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Http/Controllers/BaseController.php">
+        <class name="App\Http\Controllers\BaseController" namespace="App\Http\Controllers">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="6" ncloc="6" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Http/Controllers/Controller.php">
+        <class name="App\Http\Controllers\Controller" namespace="App\Http\Controllers">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="6" ncloc="6" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Http/Controllers/RoomController.php">
+        <class name="App\Http\Controllers\RoomController" namespace="App\Http\Controllers">
+          <metrics complexity="10" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="26" coveredelements="26"/>
+        </class>
+        <line num="67" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="69" type="stmt" count="10"/>
+        <line num="98" type="method" name="index" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="100" type="stmt" count="2"/>
+        <line num="102" type="stmt" count="2"/>
+        <line num="103" type="stmt" count="1"/>
+        <line num="106" type="stmt" count="1"/>
+        <line num="108" type="stmt" count="1"/>
+        <line num="158" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="160" type="stmt" count="1"/>
+        <line num="162" type="stmt" count="1"/>
+        <line num="188" type="method" name="show" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="190" type="stmt" count="2"/>
+        <line num="192" type="stmt" count="2"/>
+        <line num="193" type="stmt" count="1"/>
+        <line num="196" type="stmt" count="1"/>
+        <line num="239" type="method" name="update" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="241" type="stmt" count="2"/>
+        <line num="243" type="stmt" count="2"/>
+        <line num="244" type="stmt" count="1"/>
+        <line num="247" type="stmt" count="1"/>
+        <line num="273" type="method" name="destroy" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="275" type="stmt" count="2"/>
+        <line num="277" type="stmt" count="2"/>
+        <line num="278" type="stmt" count="1"/>
+        <line num="281" type="stmt" count="1"/>
+        <metrics loc="284" ncloc="71" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="26" coveredelements="26"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests">
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Http/Requests/CreateRoomRequest.php">
+        <class name="App\Http\Requests\CreateRoomRequest" namespace="App\Http\Requests">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="23" coveredelements="23"/>
+        </class>
+        <line num="20" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="25" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <metrics loc="49" ncloc="38" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="23" coveredelements="23"/>
+      </file>
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Http/Requests/UpdateRoomRequest.php">
+        <class name="App\Http\Requests\UpdateRoomRequest" namespace="App\Http\Requests">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
+        </class>
+        <line num="18" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="23" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <metrics loc="36" ncloc="27" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
+      </file>
+    </package>
+    <package name="App\Http\Resources">
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Http/Resources/RoomResource.php">
+        <class name="App\Http\Resources\RoomResource" namespace="App\Http\Resources">
+          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="19" elements="43" coveredelements="19"/>
+        </class>
+        <line num="15" type="method" name="toArray" visibility="public" complexity="2" crap="2.66" count="4"/>
+        <line num="17" type="stmt" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="19" type="stmt" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="21" type="stmt" count="4"/>
+        <line num="22" type="stmt" count="4"/>
+        <line num="23" type="stmt" count="4"/>
+        <line num="24" type="stmt" count="4"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="26" type="stmt" count="4"/>
+        <line num="27" type="stmt" count="4"/>
+        <line num="28" type="stmt" count="4"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="4"/>
+        <line num="45" type="stmt" count="4"/>
+        <line num="46" type="stmt" count="4"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="55" type="stmt" count="4"/>
+        <line num="56" type="stmt" count="4"/>
+        <line num="57" type="stmt" count="4"/>
+        <line num="58" type="stmt" count="4"/>
+        <metrics loc="61" ncloc="56" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="19" elements="43" coveredelements="19"/>
+      </file>
+    </package>
+    <package name="App\Jobs">
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Jobs/GenerateThumbnail.php">
+        <class name="App\Jobs\GenerateThumbnail" namespace="App\Jobs">
+          <metrics complexity="4" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="1" elements="15" coveredelements="2"/>
+        </class>
+        <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="25" type="method" name="handle" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="37" type="method" name="generateThumbnailUrl" visibility="private" complexity="1" crap="2" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="42" type="method" name="updatePhotoThumbnail" visibility="private" complexity="1" crap="2" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <metrics loc="48" ncloc="42" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="1" elements="15" coveredelements="2"/>
+      </file>
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Jobs/ModeratePhoto.php">
+        <class name="App\Jobs\ModeratePhoto" namespace="App\Jobs">
+          <metrics complexity="4" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="1" elements="24" coveredelements="2"/>
+        </class>
+        <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="25" type="method" name="handle" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="37" type="method" name="performModeration" visibility="private" complexity="1" crap="2" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="47" type="method" name="updatePhotoModeration" visibility="private" complexity="1" crap="2" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <metrics loc="57" ncloc="51" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="1" elements="24" coveredelements="2"/>
+      </file>
+    </package>
+    <package name="App\Models">
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Models/Room.php">
+        <class name="App\Models\Room" namespace="App\Models">
+          <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="6" coveredelements="0"/>
+        </class>
+        <line num="33" type="method" name="ratePlans" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="38" type="method" name="photos" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="43" type="method" name="primaryPhoto" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <metrics loc="48" ncloc="48" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="6" coveredelements="0"/>
+      </file>
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Models/RoomPhoto.php">
+        <class name="App\Models\RoomPhoto" namespace="App\Models">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        </class>
+        <line num="51" type="method" name="room" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <metrics loc="56" ncloc="56" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Models/RoomPrice.php">
+        <class name="App\Models\RoomPrice" namespace="App\Models">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        </class>
+        <line num="29" type="method" name="ratePlan" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <metrics loc="34" ncloc="34" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Models/RoomRatePlan.php">
+        <class name="App\Models\RoomRatePlan" namespace="App\Models">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="33" type="method" name="room" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="38" type="method" name="prices" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <metrics loc="43" ncloc="43" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Providers">
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Providers/AppServiceProvider.php">
+        <class name="App\Providers\AppServiceProvider" namespace="App\Providers">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="23" coveredelements="23"/>
+        </class>
+        <line num="12" type="method" name="register" visibility="public" complexity="1" crap="1" count="28"/>
+        <line num="14" type="stmt" count="28"/>
+        <line num="15" type="stmt" count="28"/>
+        <line num="16" type="stmt" count="28"/>
+        <line num="17" type="stmt" count="28"/>
+        <line num="19" type="stmt" count="28"/>
+        <line num="20" type="stmt" count="28"/>
+        <line num="21" type="stmt" count="28"/>
+        <line num="22" type="stmt" count="28"/>
+        <line num="24" type="stmt" count="28"/>
+        <line num="25" type="stmt" count="28"/>
+        <line num="26" type="stmt" count="28"/>
+        <line num="27" type="stmt" count="28"/>
+        <line num="29" type="stmt" count="28"/>
+        <line num="30" type="stmt" count="28"/>
+        <line num="31" type="stmt" count="28"/>
+        <line num="32" type="stmt" count="28"/>
+        <line num="34" type="stmt" count="28"/>
+        <line num="35" type="stmt" count="28"/>
+        <line num="36" type="stmt" count="28"/>
+        <line num="37" type="stmt" count="28"/>
+        <line num="43" type="method" name="boot" visibility="public" complexity="1" crap="1" count="28"/>
+        <metrics loc="45" ncloc="39" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="23" coveredelements="23"/>
+      </file>
+    </package>
+    <package name="App\Repositories">
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Repositories/PhotoRepository.php">
+        <class name="App\Repositories\PhotoRepository" namespace="App\Repositories">
+          <metrics complexity="8" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="19" coveredelements="0"/>
+        </class>
+        <line num="11" type="method" name="create" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="16" type="method" name="createMany" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="21" type="method" name="findByRoom" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="26" type="method" name="find" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="31" type="method" name="update" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="42" type="method" name="delete" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <metrics loc="52" ncloc="52" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="19" coveredelements="0"/>
+      </file>
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Repositories/PriceRepository.php">
+        <class name="App\Repositories\PriceRepository" namespace="App\Repositories">
+          <metrics complexity="7" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="19" coveredelements="0"/>
+        </class>
+        <line num="11" type="method" name="create" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="16" type="method" name="find" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="21" type="method" name="findByDateRange" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="28" type="method" name="update" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="39" type="method" name="delete" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <metrics loc="49" ncloc="49" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="19" coveredelements="0"/>
+      </file>
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Repositories/RoomRepository.php">
+        <class name="App\Repositories\RoomRepository" namespace="App\Repositories">
+          <metrics complexity="8" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="21" coveredelements="0"/>
+        </class>
+        <line num="11" type="method" name="create" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="16" type="method" name="find" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="21" type="method" name="findByProperty" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="28" type="method" name="update" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="39" type="method" name="delete" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="49" type="method" name="findWithPhotos" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <metrics loc="54" ncloc="54" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="21" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Services">
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Services/PhotoService.php">
+        <class name="App\Services\PhotoService" namespace="App\Services">
+          <metrics complexity="8" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="32" coveredelements="32"/>
+        </class>
+        <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="15" type="stmt" count="7"/>
+        <line num="17" type="method" name="createRoomPhotos" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="19" type="stmt" count="4"/>
+        <line num="21" type="stmt" count="4"/>
+        <line num="23" type="stmt" count="4"/>
+        <line num="26" type="method" name="uploadPhotoToS3" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="28" type="method" name="preparePhotoData" visibility="private" complexity="2" crap="2" count="4"/>
+        <line num="30" type="stmt" count="4"/>
+        <line num="32" type="stmt" count="4"/>
+        <line num="33" type="stmt" count="3"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="39" type="stmt" count="3"/>
+        <line num="40" type="stmt" count="3"/>
+        <line num="41" type="stmt" count="3"/>
+        <line num="42" type="stmt" count="3"/>
+        <line num="43" type="stmt" count="3"/>
+        <line num="44" type="stmt" count="3"/>
+        <line num="45" type="stmt" count="3"/>
+        <line num="46" type="stmt" count="3"/>
+        <line num="49" type="stmt" count="4"/>
+        <line num="52" type="method" name="dispatchPhotoJobs" visibility="private" complexity="2" crap="2" count="4"/>
+        <line num="54" type="stmt" count="4"/>
+        <line num="55" type="stmt" count="3"/>
+        <line num="56" type="stmt" count="3"/>
+        <line num="60" type="method" name="extractS3KeyFromUrl" visibility="private" complexity="1" crap="1" count="3"/>
+        <line num="62" type="stmt" count="3"/>
+        <line num="63" type="stmt" count="3"/>
+        <metrics loc="66" ncloc="66" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="32" coveredelements="32"/>
+      </file>
+      <file name="/Users/nadeerapathirana/workspace/laravel-api-rooms/app/Services/RoomService.php">
+        <class name="App\Services\RoomService" namespace="App\Services">
+          <metrics complexity="10" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="25" coveredelements="25"/>
+        </class>
+        <line num="17" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="15"/>
+        <line num="22" type="stmt" count="15"/>
+        <line num="24" type="method" name="createRoom" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="40" type="method" name="getRoomsByProperty" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="45" type="method" name="createRatePlan" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="50" type="method" name="createPrice" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="55" type="method" name="getPricesForDateRange" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="60" type="method" name="getRoom" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="65" type="method" name="updateRoom" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="67" type="stmt" count="2"/>
+        <line num="70" type="method" name="deleteRoom" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="72" type="stmt" count="2"/>
+        <metrics loc="75" ncloc="75" classes="1" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="25" coveredelements="25"/>
+      </file>
+    </package>
+    <metrics files="24" loc="1186" ncloc="921" classes="17" methods="62" coveredmethods="29" conditionals="0" coveredconditionals="0" statements="240" coveredstatements="135" elements="302" coveredelements="164"/>
+  </project>
+</coverage>

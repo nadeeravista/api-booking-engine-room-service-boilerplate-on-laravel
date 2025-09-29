@@ -1,0 +1,457 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Room Rates & Prices API",
+        "description": "Microservice for managing room rates and prices",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000",
+            "description": "Development server"
+        }
+    ],
+    "paths": {
+        "/api/rooms": {
+            "get": {
+                "summary": "Get all rooms",
+                "description": "Retrieve all rooms for a specific property",
+                "operationId": "bea681612754126f01807ff95647eb34",
+                "parameters": [
+                    {
+                        "name": "property_id",
+                        "in": "query",
+                        "description": "Property ID to filter rooms",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Room"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a new room",
+                "description": "Create a new room for a property",
+                "operationId": "cd6c1029f22e2425a1f99cf83e27383a",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "max_occupancy",
+                                    "base_occupancy",
+                                    "property_id"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Deluxe Suite"
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "example": "Spacious room with ocean view"
+                                    },
+                                    "size": {
+                                        "type": "string",
+                                        "example": "Large"
+                                    },
+                                    "amenities": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "example": [
+                                            "wifi",
+                                            "ac",
+                                            "tv"
+                                        ]
+                                    },
+                                    "max_occupancy": {
+                                        "type": "integer",
+                                        "example": 4
+                                    },
+                                    "base_occupancy": {
+                                        "type": "integer",
+                                        "example": 2
+                                    },
+                                    "property_id": {
+                                        "type": "string",
+                                        "format": "uuid"
+                                    },
+                                    "is_active": {
+                                        "type": "boolean",
+                                        "example": true
+                                    },
+                                    "photos": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "filename": {
+                                                    "type": "string",
+                                                    "example": "room1.jpg"
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "example": "https://s3.amazonaws.com/bucket/room1.jpg"
+                                                },
+                                                "thumbnail_url": {
+                                                    "type": "string",
+                                                    "example": "https://s3.amazonaws.com/bucket/thumbnails/room1.jpg"
+                                                },
+                                                "width": {
+                                                    "type": "integer",
+                                                    "example": 1920
+                                                },
+                                                "height": {
+                                                    "type": "integer",
+                                                    "example": 1080
+                                                },
+                                                "mime_type": {
+                                                    "type": "string",
+                                                    "example": "image/jpeg"
+                                                },
+                                                "file_size": {
+                                                    "type": "integer",
+                                                    "example": 500000
+                                                },
+                                                "sort_order": {
+                                                    "type": "integer",
+                                                    "example": 0
+                                                },
+                                                "is_primary": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Room created successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Room"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation error"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/rooms/{id}": {
+            "get": {
+                "summary": "Get room by ID",
+                "description": "Retrieve a specific room by its ID",
+                "operationId": "91a59d880bb0297e8321dd75af8f506b",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Room ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Room"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Room not found"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update room",
+                "description": "Update an existing room",
+                "operationId": "c489811fdd25dfe273cf9a5bc3b5d386",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Room ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Deluxe Suite"
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "example": "Spacious room with ocean view"
+                                    },
+                                    "size": {
+                                        "type": "string",
+                                        "example": "Large"
+                                    },
+                                    "amenities": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "example": [
+                                            "wifi",
+                                            "ac",
+                                            "tv"
+                                        ]
+                                    },
+                                    "max_occupancy": {
+                                        "type": "integer",
+                                        "example": 4
+                                    },
+                                    "base_occupancy": {
+                                        "type": "integer",
+                                        "example": 2
+                                    },
+                                    "is_active": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Room updated successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Room"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Room not found"
+                    },
+                    "422": {
+                        "description": "Validation error"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete room",
+                "description": "Delete a room",
+                "operationId": "61024891be80949c0aaa6e4536381225",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Room ID",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Room deleted successfully"
+                    },
+                    "404": {
+                        "description": "Room not found"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Room": {
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Deluxe Suite"
+                    },
+                    "description": {
+                        "type": "string",
+                        "example": "Spacious room with ocean view"
+                    },
+                    "size": {
+                        "type": "string",
+                        "example": "Large"
+                    },
+                    "amenities": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "wifi",
+                            "ac",
+                            "tv"
+                        ]
+                    },
+                    "max_occupancy": {
+                        "type": "integer",
+                        "example": 4
+                    },
+                    "base_occupancy": {
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "property_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "is_active": {
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "photos": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/RoomPhoto"
+                        }
+                    },
+                    "primary_photo": {
+                        "$ref": "#/components/schemas/RoomPhoto"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "RoomPhoto": {
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "filename": {
+                        "type": "string",
+                        "example": "room1.jpg"
+                    },
+                    "url": {
+                        "type": "string",
+                        "example": "https://s3.amazonaws.com/bucket/room1.jpg"
+                    },
+                    "thumbnail_url": {
+                        "type": "string",
+                        "example": "https://s3.amazonaws.com/bucket/thumbnails/room1.jpg"
+                    },
+                    "width": {
+                        "type": "integer",
+                        "example": 1920
+                    },
+                    "height": {
+                        "type": "integer",
+                        "example": 1080
+                    },
+                    "sort_order": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "is_primary": {
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "mime_type": {
+                        "type": "string",
+                        "example": "image/jpeg"
+                    },
+                    "file_size": {
+                        "type": "integer",
+                        "example": 500000
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "description": "Auth0 JWT Token (enabled when AUTH0_ENABLED=true)",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    }
+}
